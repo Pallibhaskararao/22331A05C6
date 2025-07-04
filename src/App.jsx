@@ -1,24 +1,72 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import './App.css'
 
-function handleShorten() {
-  setError("");
-  if (!longUrl.trim()) {
-    setError("Please enter a URL.");
-    return;
-  }
-  if (!isValidUrl(longUrl)) {
-    setError("Invalid URL format.");
-    return;
-  }
-}
+const STORAGE_KEY = "shortUrls";
+
+        function generateShortCode(length = 6) {
+          const chars =
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+          let result = "";
+          for (let i = 0; i < length; i++) {
+            result += chars.charAt(Math.floor(Math.random() * chars.length));
+          }
+          return result;
+        }
+
+        function isValidUrl(url) {
+          try {
+            new URL(url);
+            return true;
+          } catch {
+            return false;
+          }
+        }
+
+        function handleShorten() {
+          setError("");
+          if (!longUrl.trim()) {
+            setError("Please enter a URL.");
+            return;
+          }
+          if (!isValidUrl(longUrl)) {
+            setError("Invalid URL format.");
+            return;
+          }
+
+          const existing = urls.find((u) => u.longUrl === longUrl.trim());
+            if (existing) {
+              setCopied(existing.shortCode);
+              return;
+            }
+
+            let shortCode;
+            do {
+              shortCode = generateShortCode();
+            } while (urls.find((u) => u.shortCode === shortCode));
+
+            const newUrl = {
+              longUrl: longUrl.trim(),
+              shortCode,
+              createdAt: new Date().toISOString(),
+              clickCount: 0,
+              lastClicked: null,
+            };
+            setUrls([newUrl, ...urls]);
+            setCopied(shortCode);
+            setLongUrl("");
+        }
 
 export default function App() {
-  const [longUrl, setLongUrl] = useState("")
+    const [longUrl, setLongUrl] = useState("");
+    const [urls, setUrls] = useState([]);
+    const [error, setError] = useState("");
 
-  const SaveUrl = () =>{
-    setUrl(document.getElementsByClassName("url").value)
+    
 
+  const printUrl = () =>{
+    return (
+      <p> The url is your given url : {longUrl}</p>
+    )
   }
 
   return (
@@ -28,13 +76,15 @@ export default function App() {
         <h3>Enter the link to convert into short link : </h3>
         <input type = "url" 
             className = "url" 
-            placeholder="Enter the LongUrl to convert " 
+            placeholder="Enter the URL to convert " 
             value={longUrl}
           onChange={(e) => setLongUrl(e.target.value)}
             />
         <div className="card">
-          <button className='generate' onClick={handleShorten}>
-            Generate
+          <button className='generate' onClick={()=>{
+            <p> The url is your given url : {longUrl}</p>
+          }}>
+            <a href = "{longUrls}">Generate</a>
           </button>
         </div>
 
