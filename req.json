@@ -1,8 +1,26 @@
-{
-    "email" : "pallibhaskararao21@gmailcom",
-    "name " : "PALLI BHASKARA RAO",
-    "mobilNo" : "9493193475",
-    "githubUsername" : "Pallibhaskararao",
+{{
+    "email" : "pallibhaskararao21@gmail.com",
+    "name " : "Palli Bhaskara Rao",
     "rollNo" : "22331A05C6",
+    "mobilNo": "9493193475",
+    "githubUsername" : "Pallibhaskararao",
     "accessCode" : "mUNQHe"
+},
+
+{
+    "email": "pallibhaskararao21@gmail.com",
+    "name": "palli bhaskara rao",
+    "rollNo": "22331a05c6",
+    "accessCode": "mUNQHe",
+    "clientID": "748a2364-911b-40f8-9b4c-c9b31caf87b2",
+    "clientSecret": "CtTDbznfvDeXkYAf"
 }
+
+{
+    "token_type": "Bearer",
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJwYWxsaWJoYXNrYXJhcmFvMjFAZ21haWwuY29tIiwiZXhwIjoxNzUxNjA3MjYxLCJpYXQiOjE3NTE2MDYzNjEsImlzcyI6IkFmZm9yZCBNZWRpY2FsIFRlY2hub2xvZ2llcyBQcml2YXRlIExpbWl0ZWQiLCJqdGkiOiJlMDQ2YzQ4Zi1jZDI1LTQzODUtOWRkYy00MmM2MGIwYzUxYWUiLCJsb2NhbGUiOiJlbi1JTiIsIm5hbWUiOiJwYWxsaSBiaGFza2FyYSByYW8iLCJzdWIiOiI3NDhhMjM2NC05MTFiLTQwZjgtOWI0Yy1jOWIzMWNhZjg3YjIifSwiZW1haWwiOiJwYWxsaWJoYXNrYXJhcmFvMjFAZ21haWwuY29tIiwibmFtZSI6InBhbGxpIGJoYXNrYXJhIHJhbyIsInJvbGxObyI6IjIyMzMxYTA1YzYiLCJhY2Nlc3NDb2RlIjoibVVOUUhlIiwiY2xpZW50SUQiOiI3NDhhMjM2NC05MTFiLTQwZjgtOWI0Yy1jOWIzMWNhZjg3YjIiLCJjbGllbnRTZWNyZXQiOiJDdFREYnpuZnZEZVhrWUFmIn0.NK-XT1If5pDT-9PII-fWj3_oxetXwggdt573G_VAtcU",
+    "expires_in": 1751607261
+}};
+
+
+your task is develop a user-friently URL Shortener application that providescore URL functionalities  and displys anatics results,all managed within the cilent side application
