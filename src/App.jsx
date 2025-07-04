@@ -84,15 +84,9 @@ export default function App() {
           <button className='generate' onClick={()=>{
             <p> The url is your given url : {longUrl}</p>
           }}>
-            <a href = "{longUrls}">Generate</a>
+            <a href = "{longUrl}">Generate</a>
           </button>
         </div>
-
-      {/* {url.map((l,index) =>(
-        <li key = {index} >
-          {l}
-        </li>
-      ))} */}
 
       <footer style={{ marginTop: 40, textAlign: "center", color: "#666" }}>
         Made with in React — Fully Client Side
